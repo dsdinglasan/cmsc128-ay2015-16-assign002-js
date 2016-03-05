@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <title>Bioinformatics Library</title>
+
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+     <script src="js/index.js"> </script>
+</head>
+
+<body>
+<nav class="blue-grey darken-5" role="navigation">
+  <div class="nav-wrapper container">
+    <a href="index.html" class="brand-logo">&nbspBioinformatics Library</a>
+  </div>
+</nav>
+
+<div style="width: 80%;margin-left:10%;margin-top:2%;">
+    <!--ROW 1-->
+    <div class="row">
+    <div class="col s2" style="width: 50%;">
+        <div class="card-panel blue-grey darken-5">
+          <h5 class="white-text">Get Hamming Distance</h5>
+          <span class="white-text">This function will get the number of inversions per character need to transform string str1 to string str2 or vise-versa.</span>
+          <br />
+          <span class="white-text">String1: </span>
+          <input type="text" class="input-field white-text" name="HDstr1" placeholder="String1" id="HDstr1"/>
+          <span class="white-text">String2: </span>
+          <input type="text" class="input-field white-text" name="HDstr2" placeholder="String2" id="HDstr2"/>
+		  <input type="button" value="EXECUTE" onclick="getHammingDistance(HDstr1.value, HDstr2.value)" class="btn btn-falt"/>
+        </div>
+    </div>
+    <div class="col s2" style="width: 50%;">
+        <div class="card-panel blue-grey darken-5">
+          <h5 class="white-text">Count Substring Pattern</h5>
+          <span class="white-text">This function will count the number of occurrence of pattern in the string.</span>
+          <br />
+          <span class="white-text">String: </span>
+          <input type="text" class="input-field white-text" name="CSPstr1" placeholder="String" id="CSPstr1"/>
+          <span class="white-text">Pattern: </span>
+          <input type="text" class="input-field white-text" name="CSPstr2" placeholder="Pattern" id="CSPpattern"/>
+		  <input type="button" value="EXECUTE" onclick="countSubstrPattern(CSPstr1, CSPpattern)" class="btn btn-falt"/>
+        </div>
+    </div>
+    <div class="col s2" style="width: 50%;">
+        <div class="card-panel blue-grey darken-5">
+          <h5 class="white-text">Is String Valid</h5>
+          <span class="white-text">Given an alphabet string where all letters are assumed to be unique, this function returns true if the string str is a valid string based on the letters of alphabet.</span>
+          <br />
+          <span class="white-text">String: </span>
+          <input type="text" class="input-field white-text" name="SVstr1" placeholder="String" id="SVstr1"/>
+          <span class="white-text">Alphabet: </span>
+          <input type="text" class="input-field white-text" name="SVstr2" placeholder="Pattern" id="SVstr2"/>
+		  <input type="button" value="EXECUTE" onclick="isValidString(SVstr1, SVstr2)" class="btn btn-falt"/>
+        </div>
+    </div>
+    <!--End of Row 1-->
+
+     <!--START OF ROW 2-->
+    <div class="col s2" style="width: 50%;">
+        <div class="card-panel blue-grey darken-5">
+          <h5 class="white-text">Get the Skew Value</h5>
+          <span class="white-text">Given a genome str of some length q (where q>0), it returns the number of Gs minus the number of Cs in the first n nucleotides (q>=n).</span>
+          <br />
+          <span class="white-text">Genome String: </span>
+          <input type="text" class="input-field white-text" name="GSstr" placeholder="String" id="GSstr"/>
+          <span class="white-text">N: </span>
+          <input type="text" class="input-field white-text" name="n" placeholder="N" id="n"/>
+		  <input type="button" value="EXECUTE" onclick="getSkew(GSstr, n)" class="btn btn-falt"/>
+        </div>
+    </div>
+
+    <div class="col s2" style="width: 50%;">
+        <div class="card-panel blue-grey darken-5">
+          <h5 class="white-text">Get the Maximum Skew Value</h5>
+          <span class="white-text">Given a genome str of some length q (where q>0), it returns the maximum value of the number of Gs minus the number of Cs in the first n nucleotides (q>=n).</span>
+          <br />
+          <span class="white-text">Genome String: </span>
+          <input type="text" class="input-field white-text" name="GMSstr" placeholder="String" id="GMSstr"/>
+          <span class="white-text">N: </span>
+          <input type="text" class="input-field white-text" name="Maxn" placeholder="N" id="Maxn"/>
+		  <input type="button" value="EXECUTE" onclick="getMaxSkewN(GMSstr, Maxn)" class="btn btn-falt"/>
+        </div>
+    </div>
+
+    <div class="col s2" style="width: 50%;">
+        <div class="card-panel blue-grey darken-5">
+          <h5 class="white-text">Get the Minimum Skew Value</h5>
+          <span class="white-text">Given a genome str of some length q (where q>0), it returns the minimum value of the number of Gs minus the number of Cs in the first n nucleotides (q>=n).</span>
+          <br />
+          <span class="white-text">Genome String: </span>
+          <input type="text" class="input-field white-text" name="GMinSstr" placeholder="String" id="GMinSstr"/>
+          <span class="white-text">N: </span>
+          <input type="text" class="input-field white-text" name="Minn" placeholder="N" id="Minn"/>
+		  <input type="button" value="EXECUTE" onclick="getMinSkewN(GMinSstr, Minn)" class="btn btn-falt"/>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>

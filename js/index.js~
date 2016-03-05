@@ -1,0 +1,8 @@
+function getHammingDistance(str1, str2){
+	if(str1.length!=str2.length){
+		alert("Error! Strings are not equal!");
+	}
+	else{
+		
+	}
+}
