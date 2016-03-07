@@ -28,7 +28,7 @@
           <input type="text" class="input-field white-text" name="HDstr1" placeholder="String1" id="HDstr1"/>
           <span class="white-text">String2: </span>
           <input type="text" class="input-field white-text" name="HDstr2" placeholder="String2" id="HDstr2"/>
-		  <input type="button" value="EXECUTE" onclick="getHammingDistance(HDstr1.value, HDstr2.value)" class="btn btn-falt"/>
+		  <input type="button" value="EXECUTE" onclick="getHammingDistance(HDstr1.value, HDstr2.value)" class="btn"/>
         </div>
     </div>
     <div class="col s2" style="width: 50%;">
@@ -40,7 +40,7 @@
           <input type="text" class="input-field white-text" name="CSPstr1" placeholder="String" id="CSPstr1"/>
           <span class="white-text">Pattern: </span>
           <input type="text" class="input-field white-text" name="CSPstr2" placeholder="Pattern" id="CSPpattern"/>
-		  <input type="button" value="EXECUTE" onclick="countSubstrPattern(CSPstr1, CSPpattern)" class="btn btn-falt"/>
+		  <input type="button" value="EXECUTE" onclick="countSubstrPattern(CSPstr1.value, CSPpattern.value)" class="btn"/>
         </div>
     </div>
     <div class="col s2" style="width: 50%;">
@@ -52,7 +52,7 @@
           <input type="text" class="input-field white-text" name="SVstr1" placeholder="String" id="SVstr1"/>
           <span class="white-text">Alphabet: </span>
           <input type="text" class="input-field white-text" name="SVstr2" placeholder="Pattern" id="SVstr2"/>
-		  <input type="button" value="EXECUTE" onclick="isValidString(SVstr1, SVstr2)" class="btn btn-falt"/>
+		  <input type="button" value="EXECUTE" onclick="isValidString(SVstr1.value, SVstr2.value)" class="btn"/>
         </div>
     </div>
     <!--End of Row 1-->
@@ -67,7 +67,7 @@
           <input type="text" class="input-field white-text" name="GSstr" placeholder="String" id="GSstr"/>
           <span class="white-text">N: </span>
           <input type="text" class="input-field white-text" name="n" placeholder="N" id="n"/>
-		  <input type="button" value="EXECUTE" onclick="getSkew(GSstr, n)" class="btn btn-falt"/>
+		  <input type="button" value="EXECUTE" onclick="getSkew(GSstr.value, n.value)" class="btn"/>
         </div>
     </div>
 
@@ -80,7 +80,7 @@
           <input type="text" class="input-field white-text" name="GMSstr" placeholder="String" id="GMSstr"/>
           <span class="white-text">N: </span>
           <input type="text" class="input-field white-text" name="Maxn" placeholder="N" id="Maxn"/>
-		  <input type="button" value="EXECUTE" onclick="getMaxSkewN(GMSstr, Maxn)" class="btn btn-falt"/>
+		  <input type="button" value="EXECUTE" onclick="getMaxSkewN(GMSstr.value, Maxn.value)" class="btn"/>
         </div>
     </div>
 
@@ -93,7 +93,7 @@
           <input type="text" class="input-field white-text" name="GMinSstr" placeholder="String" id="GMinSstr"/>
           <span class="white-text">N: </span>
           <input type="text" class="input-field white-text" name="Minn" placeholder="N" id="Minn"/>
-		  <input type="button" value="EXECUTE" onclick="getMinSkewN(GMinSstr, Minn)" class="btn btn-falt"/>
+		  <input type="button" value="EXECUTE" onclick="getMinSkewN(GMinSstr.value, Minn.value)" class="btn"/>
         </div>
     </div>
 </div>
