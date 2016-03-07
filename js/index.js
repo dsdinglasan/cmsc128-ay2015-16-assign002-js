@@ -30,7 +30,7 @@ function countSubstrPattern(str, pattern){
     	alert("INVALID!");
     	return null;
     }
-	else{
+	else if(pattern.length<=str.length){
 		var n = 0, pos = 0, step=1;
 		while (pos>=0) {
 		    pos = str.indexOf(pattern, pos);
@@ -41,6 +41,10 @@ function countSubstrPattern(str, pattern){
 		}
 		alert(n);
 		return n;
+    }
+    else if(pattern.length>str.length){
+    	alert("INVALID! Pattern length is greater than the string length");
+    	return null;
     }
 }
 
@@ -76,53 +80,70 @@ function isValidString(str, alphabet){
 function getSkew(str, n){
 	var no_g=0;
 	var no_c=0;
-	
-	for(var i=0;i<=n-1;i++){
-		if(str[i].toUpperCase()=='G'){
-			no_g+=1;
-		}
-		else if(str[i].toUpperCase()=='C'){
-			no_c+=1;
-		}
+	if(n>str.length || n < 1){
+		alert("INVALID value of N!");
+		return null;
 	}
-	alert(no_g-no_c);
-	return (no_g-no_c);
+	else{
+		for(var i=0;i<=n-1;i++){
+			if(str[i].toUpperCase()=='G'){
+				no_g+=1;
+			}
+			else if(str[i].toUpperCase()=='C'){
+				no_c+=1;
+			}
+		}
+		alert(no_g-no_c);
+		return (no_g-no_c);
+	}
 }
 
 function getMaxSkewN(str, n){
 	var no_g=0;
 	var no_c=0;
 	var arr = [];
-	for(var i=0;i<=n-1;i++){
-		if(str[i].toUpperCase()=='G'){
-			no_g+=1;
-		}
-		else if(str[i].toUpperCase()=='C'){
-			no_c+=1;
-		}
-		arr.push(no_g-no_c);
+	if(n>str.length || n < 1){
+		alert("INVALID value of N!");
+		return null;
 	}
-	var maximum = Math.max.apply(Math, arr);
-	console.log(maximum);
-	alert(maximum);
-	return maximum;
+	else{
+		for(var i=0;i<=n-1;i++){
+			if(str[i].toUpperCase()=='G'){
+				no_g+=1;
+			}
+			else if(str[i].toUpperCase()=='C'){
+				no_c+=1;
+			}
+			arr.push(no_g-no_c);
+		}
+		var maximum = Math.max.apply(Math, arr);
+		console.log(maximum);
+		alert(maximum);
+		return maximum;
+	}
 }
 
 function getMinSkewN(str, n){
 	var no_g=0;
 	var no_c=0;
 	var arr = [];
-	for(var i=0;i<=n-1;i++){
-		if(str[i].toUpperCase()=='G'){
-			no_g+=1;
-		}
-		else if(str[i].toUpperCase()=='C'){
-			no_c+=1;
-		}
-		arr.push(no_g-no_c);
+	if(n>str.length || n < 1){
+		alert("INVALID value of N!");
+		return null;
 	}
-	var minimum = Math.min.apply(Math, arr);
-	console.log(minimum);
-	alert(minimum);
-	return minimum;
+	else{
+		for(var i=0;i<=n-1;i++){
+			if(str[i].toUpperCase()=='G'){
+				no_g+=1;
+			}
+			else if(str[i].toUpperCase()=='C'){
+				no_c+=1;
+			}
+			arr.push(no_g-no_c);
+		}
+		var minimum = Math.min.apply(Math, arr);
+		console.log(minimum);
+		alert(minimum);
+		return minimum;
+	}
 }
