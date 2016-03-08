@@ -7,8 +7,6 @@
 Given two strings str1 and str2 of same length (length must never be 0 or negative!), the Hamming Distance of those two strings are the number of inversions per character need to transform str1 to str2 or vise-versa. Simply put, the Hamming Distance of two strings is the number of characters that differ in ith position from position 1 to strlen(str1).
 */
 function getHammingDistance(str1, str2){
-	str1 = str1.toUpperCase();
-	str2 = str2.toUpperCase();
 	if(str1.length!=str2.length){//compares the length of the two strings
 		alert("Error! Strings are not equal!");
 		return null;
@@ -32,8 +30,6 @@ function getHammingDistance(str1, str2){
 Given a string original and pattern, we will count the number of occurrence of pattern in original.
 */
 function countSubstrPattern(str, pattern){
-	str = str.toUpperCase();
-	pattern = pattern.toUpperCase();
 	str += "";
     pattern += "";
     if (pattern.length <= 0 || str.length <= 0){//check if the string/pattern entered is valid
